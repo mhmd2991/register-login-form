@@ -1,1 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --blackColor: #000000;
+    --whiteColor: #ffffff;
+    --greenColor: #56ab2f;
+    --borderColor: #e5e5e5;
+}
+
+body {
+    background: linear-gradient(to right, var(--greenColor) 0%, #a8e063 100%);
+    font-weight: 400;
+    line-height: 1;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 100%;
+}
+
+@media(min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media(min-width: 768px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media(min-width: 992px) {
+    .container {
+        width: 960px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    min-height: 100vh;
+}
+
+.wrapper .sign-in-page {
+    position: relative;
+    padding: 4rem 3.7rem 0;
+    background-color: var(--whiteColor);
+    border-radius: 5rem 0 5rem 0;
+    box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 10%);
+}
+
+.wrapper .sign-in-page .left p {
+    color: #666666;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.wrapper .sign-in-page .left h1 {
+    color: var(--blackColor);
+    font-size: 2.2rem;
+}
+
+.wrapper .sign-in-page .left img {
+    display: none;
+}
+
+.wrapper .sign-in-page .right .btns {
+    margin: 3rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .sign-in-page .right .btns .sign-in,
+.wrapper .sign-in-page .right .btns .sign-up {
+    font-size: 1.4rem;
+    color: var(--blackColor);
+    font-weight: 600;
+    padding: .7rem 1rem;
+    background-color: var(--borderColor);
+    transition: all .4s ease-in-out;
+}
+
+.wrapper .sign-in-page .right .btns .sign-in {
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.wrapper .sign-in-page .right .btns .sign-up {
+    border-radius: 0 0.3rem 0.3rem 0;
+}
+
+.wrapper .sign-in-page .right .btns .sign-in.active,
+.wrapper .sign-in-page .right .btns .sign-up.active {
+    background-color: var(--greenColor);
+    color: var(--whiteColor);
+}
+
+.wrapper .sign-in-sec,
+.wrapper .sign-up-sec {
+    padding-bottom: 3rem;
+    display: none;
+}
+
+.wrapper .sign-in-sec.active,
+.wrapper .sign-up-sec.active {
+    display: block;
+}
+
+.wrapper .sec {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+.wrapper h3 {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper h3::first-letter {
+    color: var(--whiteColor);
+    margin-right: .5rem;
+}
+
+.wrapper h3::before,
+.wrapper h3::after {
+    content: "";
+    position: absolute;
+    background-color: var(--greenColor);
+}
+
+.wrapper h3::before {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    top: 0;
+    left: -.5rem;
+    z-index: -1;
+}
+
+.wrapper h3::after {
+    height: .2rem;
+    width: 3rem;
+    bottom: 0;
+    left: 0;
+}
+
+.wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper form .form-group {
+    position: relative;
+}
+
+.wrapper form .form-group>i {
+    position: absolute;
+    top: 1.7rem;
+    right: 1rem;
+    font-size: 1.4rem;
+    visibility: hidden;
+}
+
+.wrapper form .form-group .msg {
+    position: absolute;
+    color: #e74c3c;
+    bottom: .4rem;
+    left: .3rem;
+    font-size: 1.3rem;
+    visibility: hidden;
+}
+
+.wrapper form .form-group .inner-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapper form .form-group .inner-input:not(:nth-child(3)) {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.wrapper .sign-in-sec form .form-group:not(:nth-child(3)) .inner-input,
+.wrapper .sign-up-sec form .form-group:not(:nth-child(5)) .inner-input {
+    border: .1rem solid var(--borderColor);
+}
+
+.wrapper form .form-group .inner-input i {
+    margin-left: 1.5rem;
+    color: var(--greenColor);
+}
+
+.wrapper form .form-group .inner-input input:not([type="checkbox"]) {
+    height: 4rem;
+    width: 100%;
+    padding: 0 1.5rem 0 2rem;
+    border: none;
+    outline: none;
+}
+
+.wrapper form .form-group .inner-input input:not([type="checkbox"]):focus::placeholder {
+    opacity: 0;
+}
+
+.wrapper form .form-group .inner-input .check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .form-group .inner-input input:not([type="checkbox"]) {
+    height: 4rem;
+    padding: 0 1.5rem 0 2rem;
+}
+
+form .form-group .inner-input input:not([type="checkbox"]):focus::placeholder {
+    opacity: 0;
+}
+
+form .form-group .inner-input input[type="checkbox"] {
+    display: none;
+}
+
+form .form-group .inner-input label span {
+    position: relative;
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: .1rem solid #d2d2d2;
+    cursor: pointer;
+}
+
+form .form-group .inner-input input[type="checkbox"]+label span::before {
+    content: "";
+    position: absolute;
+    width: .7rem;
+    height: .7rem;
+    border-radius: 50%;
+    font-size: .8rem;
+    color: var(--whiteColor);
+    background-color: var(--greenColor);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
+}
+
+form .form-group .inner-input input[type="checkbox"]:checked+label span::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.wrapper form .form-group .inner-input .check small {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    color: var(--blackColor);
+}
+
+.wrapper form .form-group .inner-input a {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    color: var(--blackColor);
+}
+
+.wrapper form .form-group .btn-sign-in,
+.wrapper form .form-group .btn-sign-up {
+    background-color: var(--greenColor);
+    color: var(--whiteColor);
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    padding: 1.2rem 2.7rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.wrapper form .form-group.success .inner-input {
+    border-color: #2ecc71 !important;
+}
+
+.wrapper form .form-group.error .inner-input {
+    border-color: #e74c3c !important;
+}
+
+.wrapper form .form-group.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+
+.wrapper form .form-group.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+
+.wrapper form .form-group.error .msg {
+    visibility: visible;
+}
+
+.wrapper .sign-in-sec .login-resources {
+    margin-top: 2.7rem;
+}
+
+.wrapper .sign-in-sec .login-resources h4 {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    color: var(--blackColor);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.wrapper .sign-in-sec .login-resources .social {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.wrapper .sign-in-sec .login-resources .social a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.3rem 1.5rem;
+    font-size: 1.5rem;
+    border-radius: .3rem;
+    background-color: #3b4998;
+    color: var(--whiteColor);
+    text-transform: capitalize;
+}
+
+.wrapper .sign-in-sec .login-resources .social a:nth-child(2) {
+    background-color: #4099ff;
+}
+
+.wrapper .sign-in-sec .login-resources .social a:nth-child(3) {
+    background-color: #DB4437;
+}
+
+.wrapper .sign-in-sec .login-resources .social a i {
+    color: var(--whiteColor);
+}
+
+.wrapper .sign-up-sec p {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+.wrapper .sign-up-sec p a {
+    color: var(--greenColor);
+}
+
+@media(min-width: 768px) {
+
+    .wrapper .sign-in-page::after,
+    .wrapper .sign-in-page::before {
+        content: "";
+        position: absolute;
+        background-color: var(--whiteColor);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+    }
+
+    .wrapper .sign-in-page::before {
+        right: -3.5rem;
+        top: -3.5rem;
+    }
+
+    .wrapper .sign-in-page::after {
+        left: -3.5rem;
+        bottom: -3.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .wrapper .sign-in-page {
+        width: 95rem;
+        height: 63.7rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+
+    .wrapper .sign-in-page .left {
+        border-right: 0.1rem solid #f7f7f7;
+    }
+
+    .wrapper .sign-in-page .left img {
+        display: block;
+        margin-top: 12rem;
+    }
+
+    .wrapper .sign-in-page .left,
+    .wrapper .sign-in-page .right {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .wrapper .sign-in-page .right .btns {
+        justify-content: flex-end;
+    }
+
+    .wrapper .sec {
+        padding-right: 5rem;
+        padding-left: 6rem;
+    }
+
+    .wrapper .sign-in-sec .login-resources .social a {
+        padding: 1rem 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
