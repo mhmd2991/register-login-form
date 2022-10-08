@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Register & Login Form</title>
+</head>
+
+<body>
+    <div class="container wrapper">
+        <div class="sign-in-page">
+            <div class="left">
+                <p>We are glad to see you again!</p>
+                <h1>Join the largest Designer community in the world.</h1>
+                <img src="img/graphic1.svg">
+            </div>
+            <div class="right">
+                <div class="btns">
+                    <a href="#" class="sign-in active" data-section="sign-in-sec">Sign in</a>
+                    <a href="#" class="sign-up" data-section="sign-up-sec">Sign up</a>
+                </div>
+                <div class="sec sign-in-sec active">
+                    <h3>Sign in</h3>
+                    <form action="#">
+                        <div class="form-group">
+                            <div class="inner-input">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="Username">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="inner-input">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="inner-input">
+                                <div class="check">
+                                    <input type="checkbox" name="" id="remember">
+                                    <label for="remember">
+                                        <span></span>
+                                    </label>
+                                    <small>Remember me</small>
+                                </div>
+                                <a href="#">Forget Password?</a>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn-sign-in">Sign in</button>
+                        </div>
+                    </form>
+                    <div class="login-resources">
+                        <h4>login via social media</h4>
+                        <div class="social">
+                            <a href="#">
+                                <i class="fab fa-facebook-f"></i>
+                                login via facebook
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                                login via twitter
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-google"></i>
+                                login via google
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec sign-up-sec">
+                    <h3>Sign up</h3>
+                    <form action="#" id="form">
+                        <div class="form-group">
+                            <div class="inner-input">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="f-name" placeholder="Full Name">
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small class="msg">Error message</small>
+                        </div>
+                        <div class="form-group">
+                            <div class="inner-input">
+                                <i class="fas fa-at"></i>
+                                <input type="email" id="email" placeholder="example@domain.com">
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small class="msg">Error message</small>
+                        </div>
+                        <div class="form-group">
+                            <div class="inner-input">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" placeholder="Password">
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small class="msg">Error message</small>
+                        </div>
+                        <div class="form-group">
+                            <div class="inner-input">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="r-password" placeholder="Repeat Password">
+                            </div>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <small class="msg">Error message</small>
+                        </div>
+                        <div class="form-group">
+                            <div class="inner-input">
+                                <div class="check">
+                                    <input type="checkbox" name="" id="agree">
+                                    <label for="agree">
+                                        <span></span>
+                                    </label>
+                                    <small>Yes, I understand and agree to the workwise Terms & Conditions.</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn-sign-up">Sign up</button>
+                        </div>
+                    </form>
+                    <p>Already have an account? <a href="#">Log In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/9e5ba2e3f5.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
